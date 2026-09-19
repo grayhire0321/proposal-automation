@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposal Automation</title>
+<meta name="description" content="A private tool that generates personalized technical-partnership proposals and shares them from Google Drive.">
+<style>
+  :root {
+    --accent: #D2691E;
+    --ink: #2b3035;
+    --muted: #5d646b;
+    --line: #e4e7eb;
+    --bg: #ffffff;
+    --card: #F7F8FA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e9ecef; --muted: #a8b0b8; --line: #2c3238; --bg: #16191c; --card: #1e2227;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 4rem 16px 5rem; }
+  h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -0.02em; color: var(--accent); margin: 0 0 .5rem; }
+  .tagline { color: var(--muted); font-size: .95rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 2.5rem; }
+  h2 { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 2.5rem 0 .75rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.1rem; }
+  li { margin-bottom: .4rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Proposal Automation</h1>
+    <div class="tagline">Private tool &nbsp;•&nbsp; Grayson Chen</div>
+
+    <p>
+      Proposal Automation is a private internal tool. It takes a recipient's email address and a
+      public freelancer profile URL, writes a personalized two-page partnership proposal as a PDF,
+      and shares that PDF from the operator's own Google Drive with the recipient as a viewer.
+    </p>
+
+    <div class="card">
+      <strong>It is not a public service.</strong> There is no sign-up. The only people who connect
+      Google accounts to it are the operator's own accounts, each authorized once through Google's
+      consent screen.
+    </div>
+
+    <h2>What it does with Google</h2>
+    <ul>
+      <li>Creates one PDF file in the connected account's Google Drive.</li>
+      <li>Grants the intended recipient <strong>viewer</strong> access to that file, using Google's own sharing notification.</li>
+      <li>Reads the connected account's email address, to label which account was connected.</li>
+    </ul>
+
+    <h2>What it does not do</h2>
+    <ul>
+      <li>It does not read, modify or delete any Drive file it did not create.</li>
+      <li>It does not send email. No Gmail access is requested or used.</li>
+      <li>It does not create "anyone with the link" sharing, and never grants editor or owner access.</li>
+      <li>It does not sell, rent or transfer any data to third parties.</li>
+    </ul>
+
+    <h2>Google account access</h2>
+    <p>
+      The tool uses the <code>drive.file</code> scope, which limits it to files it created itself,
+      and <code>userinfo.email</code> to identify the connected account. Access can be withdrawn at
+      any time from
+      <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.
+    </p>
+
+    <footer>
+      <a href="./privacy.html">Privacy policy</a> &nbsp;·&nbsp;
+      Contact: <a href="mailto:grayson.chen.job@gmail.com">grayson.chen.job@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Proposal Automation</title>
+<meta name="description" content="Privacy policy for the Proposal Automation tool, including its use of Google user data.">
+<style>
+  :root {
+    --accent: #D2691E;
+    --ink: #2b3035;
+    --muted: #5d646b;
+    --line: #e4e7eb;
+    --bg: #ffffff;
+    --card: #F7F8FA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e9ecef; --muted: #a8b0b8; --line: #2c3238; --bg: #16191c; --card: #1e2227;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 4rem 16px 5rem; }
+  h1 { font-size: 1.9rem; line-height: 1.15; letter-spacing: -0.02em; color: var(--accent); margin: 0 0 .35rem; }
+  .updated { color: var(--muted); font-size: .9rem; margin-bottom: 2.5rem; }
+  h2 { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 2.25rem 0 .7rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.1rem; }
+  li { margin-bottom: .4rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.25rem 0; }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+  a { color: var(--accent); }
+  code { background: var(--card); padding: .1em .35em; border-radius: 4px; font-size: .9em; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <div class="updated">Proposal Automation &nbsp;·&nbsp; Last updated 19 September 2026</div>
+
+    <p>
+      Proposal Automation ("the tool") is a private tool operated by Grayson Chen. It generates
+      personalized partnership proposal documents and shares them from the operator's own Google
+      Drive. It is not offered as a public service and has no user accounts.
+    </p>
+
+    <h2>Who this covers</h2>
+    <p>
+      Two groups of people appear in the tool: the <strong>operator</strong>, who connects their own
+      Google accounts to it, and <strong>recipients</strong>, who are sent a proposal document.
+    </p>
+
+    <h2>Google user data the tool accesses</h2>
+    <ul>
+      <li>
+        <code>https://www.googleapis.com/auth/drive.file</code> — to create a single PDF in the
+        connected account's Drive and to grant the intended recipient viewer access to that file.
+        This scope gives access only to files the tool itself created; it cannot see or touch any
+        other file in the account.
+      </li>
+      <li>
+        <code>https://www.googleapis.com/auth/userinfo.email</code> — to read the email address of
+        the connected account, so the operator can tell which account is connected.
+      </li>
+    </ul>
+    <p>
+      No other Google data is requested. The tool does not access Gmail, contacts, calendar or any
+      other Google service.
+    </p>
+
+    <div class="card">
+      <strong>Limited Use disclosure.</strong> The tool's use and transfer of information received
+      from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements. Google user data is used only to provide the
+      functionality described above. It is never sold, never transferred to third parties except as
+      needed to provide that functionality, never used for advertising, and never used to train
+      generalized artificial-intelligence or machine-learning models.
+    </div>
+
+    <h2>Information the tool stores</h2>
+    <ul>
+      <li>The recipient's email address and the public profile URL entered by the operator.</li>
+      <li>Professional information read from that public profile, and the proposal text generated from it.</li>
+      <li>The generated PDF file.</li>
+      <li>Google Drive identifiers: the created file's id and link, and the sharing permission id.</li>
+      <li>An OAuth refresh token for each connected Google account, encrypted at rest with AES-256-GCM.</li>
+      <li>An operational audit log of the steps performed, for troubleshooting.</li>
+    </ul>
+    <p>
+      Google passwords are never requested, entered or stored. Access tokens and refresh tokens are
+      never exposed to the browser and are excluded from application logs.
+    </p>
+
+    <h2>Where it is stored</h2>
+    <p>
+      Data is held in a private database and file store controlled by the operator, and is not shared
+      with any third party. The only outbound transfer is to Google's own APIs, to create and share
+      the document.
+    </p>
+
+    <h2>Retention and deletion</h2>
+    <p>
+      Records are kept while they remain useful to the operator and are deleted on request. To have
+      your information removed, or to ask what is held about you, email the address below and it will
+      be deleted within 30 days.
+    </p>
+
+    <h2>Withdrawing access</h2>
+    <p>
+      An operator who has connected a Google account can revoke the tool's access at any time at
+      <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Revoking
+      access stops all further use of that account immediately. Documents already created in that
+      account's Drive remain in the account and can be deleted there.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      If this policy changes, the revised version will be posted on this page with a new
+      "last updated" date.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:grayson.chen.job@gmail.com">grayson.chen.job@gmail.com</a>
+    </p>
+
+    <footer>
+      <a href="./index.html">← Proposal Automation</a>
+    </footer>
+  </div>
+</body>
+</html>
